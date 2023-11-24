@@ -22,15 +22,18 @@ const chiamatePar3 = document.getElementById("chiamate3") as HTMLParagraphElemen
 interface Smartphone {
     carica: number;
     numeroChiamate: number;
+    id: number;
 
 }
 
 class User implements Smartphone {
     carica: number;
     numeroChiamate: number;
-    constructor(_carica: number, _numeroChiamate: number){
+    id: number;
+    constructor(_carica: number, _numeroChiamate: number, _id: number){
         this.carica = _carica;
         this.numeroChiamate = _numeroChiamate
+        this.id = _id
     }
     ricarica(importo: number): number {
         return this.carica += importo
@@ -47,13 +50,21 @@ class User implements Smartphone {
     }
     azzeraChiamate(){
         this.numeroChiamate = 0
+        if(this.id === 1){
+            chiamatePar.innerText = '0'
+        } else if (this.id === 2) {
+            chiamatePar2.innerText = '0'
+        } else if (this.id === 3) {
+            chiamatePar3.innerText = '0'
+        }
+        
     }
 
 }
 
-let cliente1 = new User(0, 0)
-let cliente2 = new User(0, 0)
-let cliente3 = new User(0, 0)
+let cliente1 = new User(0, 0, 1)
+let cliente2 = new User(0, 0, 2)
+let cliente3 = new User(0, 0, 3)
 
 
 ricaricaForm.addEventListener("submit", (e)=>{

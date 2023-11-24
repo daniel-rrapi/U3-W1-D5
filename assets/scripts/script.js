@@ -17,9 +17,10 @@ var chiamataForm3 = document.getElementById("chiamataForm3");
 var creditoResiduo3 = document.getElementById("creditoresiduo3");
 var chiamatePar3 = document.getElementById("chiamate3");
 var User = /** @class */ (function () {
-    function User(_carica, _numeroChiamate) {
+    function User(_carica, _numeroChiamate, _id) {
         this.carica = _carica;
         this.numeroChiamate = _numeroChiamate;
+        this.id = _id;
     }
     User.prototype.ricarica = function (importo) {
         return this.carica += importo;
@@ -36,12 +37,21 @@ var User = /** @class */ (function () {
     };
     User.prototype.azzeraChiamate = function () {
         this.numeroChiamate = 0;
+        if (this.id === 1) {
+            chiamatePar.innerText = '0';
+        }
+        else if (this.id === 2) {
+            chiamatePar2.innerText = '0';
+        }
+        else if (this.id === 3) {
+            chiamatePar3.innerText = '0';
+        }
     };
     return User;
 }());
-var cliente1 = new User(0, 0);
-var cliente2 = new User(0, 0);
-var cliente3 = new User(0, 0);
+var cliente1 = new User(0, 0, 1);
+var cliente2 = new User(0, 0, 2);
+var cliente3 = new User(0, 0, 3);
 ricaricaForm.addEventListener("submit", function (e) {
     e.preventDefault();
     var importoStr = ricaricaInput.value;
