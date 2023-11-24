@@ -62,7 +62,7 @@ ricaricaForm.addEventListener("submit", (e)=>{
     const importoStr = ricaricaInput.value;
     const importo = parseInt(importoStr)
     cliente1.ricarica(importo)
-    creditoResiduo.innerText = cliente1.carica.toString()
+    creditoResiduo.innerText = cliente1.carica.toString() + "€"
     ricaricaInput.value = ''
 
     
@@ -75,7 +75,7 @@ chiamataForm.addEventListener("submit", (e)=> {
     const minuti = parseInt(chiamataStr);
     cliente1.chiamata(minuti)
     chiamatePar.innerText = cliente1.numeroChiamate.toString()
-    creditoResiduo.innerHTML = cliente1.carica.toString()
+    creditoResiduo.innerHTML = cliente1.carica.toString() + "€"
     chiamataInput.value = ''
 
 } )
@@ -86,7 +86,7 @@ ricaricaForm2.addEventListener("submit", (e)=>{
     const importoStr = ricaricaInput2.value;
     const importo = parseInt(importoStr)
     cliente2.ricarica(importo)
-    creditoResiduo2.innerText = cliente2.carica.toString()
+    creditoResiduo2.innerText = cliente2.carica.toString() + "€"
     ricaricaInput2.value = ''
 
     
@@ -99,7 +99,7 @@ chiamataForm2.addEventListener("submit", (e)=> {
     const minuti = parseInt(chiamataStr);
     cliente2.chiamata(minuti)
     chiamatePar2.innerText = cliente2.numeroChiamate.toString()
-    creditoResiduo2.innerHTML = cliente2.carica.toString()
+    creditoResiduo2.innerHTML = cliente2.carica.toString() + "€"
     chiamataInput2.value = ''
 
 } )
@@ -110,7 +110,7 @@ ricaricaForm3.addEventListener("submit", (e)=>{
     const importoStr = ricaricaInput3.value;
     const importo = parseInt(importoStr)
     cliente3.ricarica(importo)
-    creditoResiduo3.innerText = cliente3.carica.toString()
+    creditoResiduo3.innerText = cliente3.carica.toString() + "€"
     ricaricaInput3.value = ''
 
     
@@ -123,7 +123,7 @@ chiamataForm3.addEventListener("submit", (e)=> {
     const minuti = parseInt(chiamataStr);
     cliente3.chiamata(minuti)
     chiamatePar3.innerText = cliente3.numeroChiamate.toString()
-    creditoResiduo3.innerHTML = cliente3.carica.toString()
+    creditoResiduo3.innerHTML = cliente3.carica.toString() + "€"
     chiamataInput3.value = ''
 
 } )
